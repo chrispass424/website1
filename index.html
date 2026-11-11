@@ -1,709 +1,228 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b35">
+  <meta name="description" content="Discover Dugnad School, located along Matuga–Semuto Road in Wakiso District, Uganda.">
+  <title>Dugnad School | Learning. Growing. Belonging.</title>
 
-    <meta name="description" content="Discover Dugnad School, located along Matuga-Semuto Road, Wakiso District, Uganda.">
-
-    <title>Dugnad School | Learning. Growing. Belonging.</title>
-
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- CSS FILE -->
-    <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <!-- ACCESSIBILITY -->
-    <a href="#main-content" class="skip-link">
-        Skip to content
-    </a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Dugnad School home">
+        <span class="brand-mark" aria-hidden="true">D</span>
+        <span class="brand-name">DUGNAD<small>SCHOOL</small></span>
+      </a>
 
-    <!-- HEADER -->
-    <header class="site-header">
+      <button class="menu-toggle" type="button" aria-label="Open navigation"
+              aria-controls="primary-navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-        <div class="container nav">
+      <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#learning">Learning</a>
+        <a href="#life">School Life</a>
+        <a href="#admissions">Admissions</a>
+        <a class="nav-cta" href="#contact">Contact Us <span aria-hidden="true">→</span></a>
+      </nav>
+    </div>
+  </header>
 
-            <!-- SCHOOL LOGO -->
-            <a href="#home" class="brand">
-
-                <div class="brand-mark">D</div>
-
-                <div class="brand-name">
-                    DUGNAD
-                    <small>SCHOOL</small>
-                </div>
-
-            </a>
-
-            <!-- MOBILE MENU BUTTON -->
-            <button
-                class="menu-toggle"
-                aria-label="Open navigation"
-                aria-expanded="false"
-                type="button">
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-            <!-- NAVIGATION LINKS -->
-            <nav class="nav-links" aria-label="Main navigation">
-
-                <a href="#home">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#learning">Learning</a>
-                <a href="#life">School Life</a>
-                <a href="#admissions">Admissions</a>
-                <a href="#contact" class="nav-cta">Contact Us →</a>
-
-            </nav>
-
-        </div>
-
-    </header>
-
-
-    <main id="main-content">
-
-        <!-- HERO SECTION -->
-        <section class="hero" id="home">
-
-            <div class="hero-pattern"></div>
-
-            <div class="container hero-grid">
-
-                <!-- HERO TEXT -->
-                <div class="hero-content">
-
-                   <p class="eyebrow light" style="font-size: 40px;">
-    <span></span>
-    WELCOME TO DUGNAD SCHOOL
+  <main id="main-content">
+    <section class="hero" id="home">
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow-light" style="font-size: 40px;">
+    <span></span> Welcome to Dugnad School
 </p>
-                    <h3>
-                        Where Every Learner
-                        <em>Can Grow.</em>
-                    </h3>
-
-                    <p class="hero-lead">
-
-                        A contemporary and growing educational
-                        institution located along Matuga–Semuto
-                        Road in Wakiso District, Uganda.
-
-                    </p>
-
-                    <p class="hero-location">
-                        📍 Matuga–Semuto Road, Wakiso District
-                    </p>
-
-                    <div class="hero-actions">
-
-                        <a href="#admissions"
-                           class="button button-lime">
-
-                            Explore Admissions →
-
-                        </a>
-
-                        <a href="#about"
-                           class="text-link light-link">
-
-                            Discover Our School ↗
-
-                        </a>
-
-                    </div>
-
-                    <div class="hero-note">
-
-                        <span class="note-icon">✳</span>
-
-                        <span>
-                            LEARNING · GROWING · BELONGING
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- HERO SCHOOL PHOTOGRAPH -->
-                <div class="hero-visual">
-
-                    <div class="photo-frame">
-
-                        <img
-                            src="home.jpeg" width="600px" height="600px"
-                            alt="Dugnad School campus"
-                            class="school-photo"
-                        >
-
-                        <div class="image-stamp">
-
-                            <span>DS</span>
-
-                            <small>
-                                LEARN<br>
-                                GROW<br>
-                                THRIVE
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                    <div class="floating-card">
-
-                        <span class="floating-star">✳</span>
-
-                        <span>
-                            <strong>Our School</strong>
-
-                            <small>
-                                Explore what makes us unique
-                            </small>
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- HERO BOTTOM LINE -->
-            <div class="container hero-bottom">
-
-                <span>QUALITY EDUCATION</span>
-
-                <div class="bottom-line"></div>
-
-                <span>HOLISTIC DEVELOPMENT</span>
-
-                <div class="bottom-line"></div>
-
-                <span>BRIGHTER FUTURE</span>
-
-            </div>
-
-        </section>
-
-
-        <!-- ABOUT SECTION -->
-        <section class="section section-pad" id="about">
-
-            <div class="container intro-grid">
-
-                <div class="intro-heading">
-
-                    <p class="eyebrow">
-                        <span></span>
-                        ABOUT DUGNAD SCHOOL
-                    </p>
-
-                    <h2>
-                        A Learning Community With
-                        <em>Big Possibilities.</em>
-                    </h2>
-
-                </div>
-
-
-                <div class="intro-text">
-
-                    <p>
-                        Dugnad School is a contemporary and
-                        rapidly growing educational institution
-                        located along Matuga–Semuto Road in
-                        Wakiso District, Uganda.
-                    </p>
-
-                    <p>
-                        This website introduces the school's
-                        identity, learning opportunities and
-                        community to parents, guardians,
-                        prospective learners and stakeholders.
-                    </p>
-
-                    <a href="#contact" class="text-link">
-                        Learn More About Us →
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- LEARNING SECTION -->
-        <section class="learning section-pad" id="learning">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <div>
-
-                        <p class="eyebrow">
-                            <span></span>
-                            DISCOVER OUR SCHOOL
-                        </p>
-
-                        <h2>
-                            Learning That Opens
-                            <em>New Doors.</em>
-                        </h2>
-
-                    </div>
-
-                    <p>
-                        Explore different aspects of the
-                        educational experience and opportunities
-                        available within the school community.
-                    </p>
-
-                </div>
-
-
-                <div class="service-grid">
-
-
-                    <!-- CARD ONE -->
-                    <article class="service-card">
-
-                        <span class="service-number">
-                            01 / LEARNING
-                        </span>
-
-                        <div class="service-icon">📚</div>
-
-                        <h3>Academic Programmes</h3>
-
-                        <p>
-                            Learning opportunities designed
-                            to develop knowledge, confidence
-                            and curiosity.
-                        </p>
-
-                        <span class="card-tag">
-                            EDUCATION
-                        </span>
-
-                    </article>
-
-
-                    <!-- CARD TWO -->
-                    <article class="service-card service-featured">
-
-                        <span class="service-number">
-                            02 / ACTIVITIES
-                        </span>
-
-                        <div class="service-icon">⚽</div>
-
-                        <h3>Co-curricular Activities</h3>
-
-                        <p>
-                            Activities that encourage
-                            creativity, teamwork, participation
-                            and talent development.
-                        </p>
-
-                        <span class="card-tag">
-                            DEVELOPMENT
-                        </span>
-
-                    </article>
-
-
-                    <!-- CARD THREE -->
-                    <article class="service-card">
-
-                        <span class="service-number">
-                            03 / ENVIRONMENT
-                        </span>
-
-                        <div class="service-icon">🏫</div>
-
-                        <h3>School Facilities</h3>
-
-                        <p>
-                            Discover the learning spaces
-                            and facilities available
-                            at the school.
-                        </p>
-
-                        <span class="card-tag">
-                            FACILITIES
-                        </span>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- SCHOOL LIFE SECTION -->
-        <section class="school-life section-pad" id="life">
-
-            <div class="container life-grid">
-
-
-                <!-- SCHOOL LIFE IMAGE -->
-                <div class="life-visual">
-
-                    <div class="life-photo">
-
-                        <img
-                            src="children.jpeg"
-                            alt="Learners participating in school activities"
-                        >
-
-                    </div>
-
-                    <div class="life-caption">
-
-                        <span>01 / OUR COMMUNITY</span>
-
-                        <span>
-                            Learning beyond the classroom
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- SCHOOL LIFE CONTENT -->
-                <div class="life-copy">
-
-                    <p class="eyebrow light">
-                        <span></span>
-                        EXPERIENCE SCHOOL LIFE
-                    </p>
-
-                    <h2>
-                        More Than a Place
-                        <em>To Study.</em>
-                    </h2>
-
-                    <p>
-                        School life brings together learning,
-                        relationships, activities and personal
-                        development.
-                    </p>
-
-                    <p>
-                        Discover the different experiences
-                        that contribute to the school community.
-                    </p>
-
-
-                    <ul class="check-list">
-
-                        <li>
-                            <span>✓</span>
-                            Academic development
-                        </li>
-
-                        <li>
-                            <span>✓</span>
-                            Creativity and participation
-                        </li>
-
-                        <li>
-                            <span>✓</span>
-                            Teamwork and personal growth
-                        </li>
-
-                        <li>
-                            <span>✓</span>
-                            School community engagement
-                        </li>
-
-                    </ul>
-
-                    <a href="#contact" class="button button-lime">
-                        Get in Touch →
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ADMISSIONS SECTION -->
-        <section class="admissions section-pad" id="admissions">
-
-            <div class="container admissions-inner">
-
-                <div class="admissions-top">
-
-                    <p class="eyebrow">
-                        <span></span>
-                        YOUR NEXT STEP
-                    </p>
-
-                    <span class="admissions-index">
-                        DUGNAD SCHOOL / ADMISSIONS
-                    </span>
-
-                </div>
-
-                <h2>
-                    Interested in Dugnad
-                    <em>School?</em>
-                </h2>
-
-                <p class="admissions-lead">
-
-                    Contact the school to ask about admissions,
-                    available educational programmes and
-                    visiting arrangements.
-
-                </p>
-
-                <a href="#contact" class="button button-dark">
-
-                    Make an Enquiry →
-
-                </a>
-
-                <div class="admissions-decoration">
-                    D
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONTACT SECTION -->
-        <section class="contact section-pad" id="contact">
-
-            <div class="container contact-grid">
-
-
-                <!-- CONTACT INFORMATION -->
-                <div class="contact-copy">
-
-                    <p class="eyebrow light">
-                        <span></span>
-                        CONTACT DUGNAD SCHOOL
-                    </p>
-
-                    <h2>
-                        Let's Start a
-                        <em>Conversation.</em>
-                    </h2>
-
-                    <p>
-                        Do you have questions about the school?
-                        Contact us to request further information.
-                    </p>
-
-
-                    <div class="contact-detail">
-
-                        <span class="detail-icon">📍</span>
-
-                        <span>
-                            <small>OUR LOCATION</small>
-
-                            <strong>
-                                Matuga–Semuto Road,
-                                Wakiso District, Uganda
-                            </strong>
-                        </span>
-
-                    </div>
-
-
-                    <div class="contact-detail">
-
-                        <span class="detail-icon">✉</span>
-
-                        <span>
-                            <small>EMAIL</small>
-
-                            <strong>
-                                Contact the school for its
-                                official email address
-                            </strong>
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- ENQUIRY FORM -->
-                <form class="enquiry-form" id="enquiry-form">
-
-                    <h3>Send an Enquiry</h3>
-
-                    <p>
-                        Complete the form below to prepare
-                        your enquiry.
-                    </p>
-
-
-                    <label for="name">
-                        Full Name
-                    </label>
-
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Enter your full name"
-                        required
-                    >
-
-
-                    <label for="email">
-                        Email Address
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email address"
-                        required
-                    >
-
-
-                    <label for="interest">
-                        I am enquiring as
-                    </label>
-
-                    <select id="interest" name="interest" required>
-
-                        <option value="">
-                            Select an option
-                        </option>
-
-                        <option value="Parent">
-                            Parent
-                        </option>
-
-                        <option value="Guardian">
-                            Guardian
-                        </option>
-
-                        <option value="Prospective Learner">
-                            Prospective Learner
-                        </option>
-
-                        <option value="Other">
-                            Other
-                        </option>
-
-                    </select>
-
-
-                    <label for="message">
-                        Your Message
-                    </label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="4"
-                        placeholder="Write your enquiry here..."
-                        required
-                    ></textarea>
-
-
-                    <button
-                        type="submit"
-                        class="button button-dark form-submit">
-
-                        Submit Enquiry →
-
-                    </button>
-
-                    <p class="form-note" id="form-note">
-                        Your enquiry will be prepared for sending
-                        through your email application.
-                    </p>
-
-                </form>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-    <footer class="footer">
-
-        <div class="container">
-
-            <div class="footer-main">
-
-                <a href="#home" class="brand footer-brand">
-
-                    <div class="brand-mark">D</div>
-
-                    <div class="brand-name">
-                        DUGNAD
-                        <small>SCHOOL</small>
-                    </div>
-
-                </a>
-
-                <p>
-                    Learning. Growing. Belonging.
-                </p>
-
-                <a href="#home" class="back-top">
-                    Back to Top ↑
-                </a>
-
-            </div>
-
-
-            <div class="footer-bottom">
-
-                <p>
-                    © <span id="year"></span>
-                    Dugnad School. All rights reserved.
-                </p>
-
-                <p>
-                    Matuga–Semuto Road, Wakiso District, Uganda
-                </p>
-
-            </div>
-
+          <h4>Where Every Learner <em>Can Grow.</em></h4>
+          <p class="hero-lead">A contemporary and growing educational institution located along Matuga–Semuto Road in Wakiso District, Uganda.</p>
+          <p class="hero-location"><span aria-hidden="true">⌖</span> Matuga–Semuto Road, Wakiso District</p>
+          <div class="hero-actions">
+            <a class="button button-lime" href="#admissions">Explore Admissions <span aria-hidden="true">→</span></a>
+            <a class="text-link light-link" href="#about">Discover Our School ↗</a>
+          </div>
+          <div class="hero-note"><span class="note-icon" aria-hidden="true">✳</span><span>LEARNING · GROWING · BELONGING</span></div>
         </div>
 
-    </footer>
+        <div class="hero-visual">
+          <div class="photo-frame">
+            <img src="home.jpeg" alt="Dugnad School campus" class="school-photo"
+                 fetchpriority="high" width="900" height="700">
+            <div class="image-stamp" aria-hidden="true"><span>DS</span><small>LEARN<br>GROW<br>THRIVE</small></div>
+          </div>
+          <div class="floating-card">
+            <span class="floating-star" aria-hidden="true">✳</span>
+            <span><strong>Our School</strong><small>Explore what makes us unique</small></span>
+          </div>
+        </div>
+      </div>
+      <div class="container hero-bottom" aria-label="Our priorities">
+        <span>QUALITY EDUCATION</span><span class="bottom-line"></span>
+        <span>HOLISTIC DEVELOPMENT</span><span class="bottom-line"></span>
+        <span>BRIGHTER FUTURE</span>
+      </div>
+    </section>
 
+    <section class="section section-pad" id="about">
+      <div class="container intro-grid">
+        <div class="intro-heading">
+          <p class="eyebrow"><span></span> About Dugnad School</p>
+          <h2>A Learning Community With <em>Big Possibilities.</em></h2>
+        </div>
+        <div class="intro-text">
+          <p>Dugnad School is a contemporary and rapidly growing educational institution located along Matuga–Semuto Road in Wakiso District, Uganda.</p>
+          <p>This website introduces the school's identity, learning opportunities and community to parents, guardians, prospective learners and stakeholders.</p>
+          <a class="text-link" href="#contact">Learn More About Us →</a>
+        </div>
+      </div>
+    </section>
 
-    <!-- JAVASCRIPT FILE -->
-    <script src="script.js"></script>
+    <section class="learning section-pad" id="learning">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> Discover Our School</p>
+            <h2>Learning That Opens <em>New Doors.</em></h2>
+          </div>
+          <p>Explore different aspects of the educational experience and opportunities available within the school community.</p>
+        </div>
 
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-number">01 / LEARNING</span>
+            <div class="service-icon" aria-hidden="true">📚</div>
+            <h3>Academic Programmes</h3>
+            <p>Learning opportunities designed to develop knowledge, confidence and curiosity.</p>
+            <span class="card-tag">EDUCATION</span>
+          </article>
+          <article class="service-card service-featured">
+            <span class="service-number">02 / ACTIVITIES</span>
+            <div class="service-icon" aria-hidden="true">⚽</div>
+            <h3>Co-curricular Activities</h3>
+            <p>Activities that encourage creativity, teamwork, participation and talent development.</p>
+            <span class="card-tag">DEVELOPMENT</span>
+          </article>
+          <article class="service-card">
+            <span class="service-number">03 / ENVIRONMENT</span>
+            <div class="service-icon" aria-hidden="true">🏫</div>
+            <h3>School Facilities</h3>
+            <p>Discover the learning spaces and facilities available at the school.</p>
+            <span class="card-tag">FACILITIES</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="school-life section-pad" id="life">
+      <div class="container life-grid">
+        <div class="life-visual">
+          <div class="life-photo">
+            <img src="children.jpeg" alt="Learners participating in school activities" loading="lazy" width="900" height="700">
+          </div>
+          <div class="life-caption"><span>01 / OUR COMMUNITY</span><span>Learning beyond the classroom</span></div>
+        </div>
+        <div class="life-copy">
+          <p class="eyebrow eyebrow-light"><span></span> Experience School Life</p>
+          <h2>More Than a Place <em>To Study.</em></h2>
+          <p>School life brings together learning, relationships, activities and personal development.</p>
+          <p>Discover the different experiences that contribute to the school community.</p>
+          <ul class="check-list">
+            <li><span aria-hidden="true">✓</span> Academic development</li>
+            <li><span aria-hidden="true">✓</span> Creativity and participation</li>
+            <li><span aria-hidden="true">✓</span> Teamwork and personal growth</li>
+            <li><span aria-hidden="true">✓</span> School community engagement</li>
+          </ul>
+          <a class="button button-lime" href="#contact">Get in Touch <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="admissions section-pad" id="admissions">
+      <div class="container admissions-inner">
+        <div class="admissions-top">
+          <p class="eyebrow"><span></span> Your Next Step</p>
+          <span class="admissions-index">DUGNAD SCHOOL / ADMISSIONS</span>
+        </div>
+        <h2>Interested in Dugnad <em>School?</em></h2>
+        <p class="admissions-lead">Contact the school to ask about admissions, available educational programmes and visiting arrangements.</p>
+        <a class="button button-dark" href="#contact">Make an Enquiry <span aria-hidden="true">→</span></a>
+        <div class="admissions-decoration" aria-hidden="true">D</div>
+      </div>
+    </section>
+
+    <section class="contact section-pad" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow eyebrow-light"><span></span> Contact Dugnad School</p>
+          <h2>Let's Start a <em>Conversation.</em></h2>
+          <p>Do you have questions about the school? Contact us to request further information.</p>
+          <div class="contact-detail">
+            <span class="detail-icon" aria-hidden="true">⌖</span>
+            <span><small>OUR LOCATION</small><strong>Matuga–Semuto Road,<br>Wakiso District, Uganda</strong></span>
+          </div>
+          <div class="contact-detail">
+            <span class="detail-icon" aria-hidden="true">✉</span>
+            <span><small>EMAIL</small><strong>Contact the school for its official email address</strong></span>
+          </div>
+        </div>
+
+        <form class="enquiry-form" id="enquiry-form">
+          <h3>Send an Enquiry</h3>
+          <p>Complete the form to prepare your enquiry.</p>
+
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" autocomplete="name" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" autocomplete="email" required>
+
+          <label for="interest">I am enquiring as</label>
+          <select id="interest" name="interest" required>
+            <option value="">Select an option</option>
+            <option value="Parent">Parent</option>
+            <option value="Guardian">Guardian</option>
+            <option value="Prospective Learner">Prospective Learner</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your enquiry here..." required></textarea>
+
+          <button class="button button-dark form-submit" type="submit">Submit Enquiry <span aria-hidden="true">→</span></button>
+          <p class="form-note" id="form-note" role="status" aria-live="polite">Your email application will open with your enquiry ready to send. This form does not send messages directly from the website.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <a class="brand footer-brand" href="#home" aria-label="Dugnad School home">
+          <span class="brand-mark" aria-hidden="true">D</span>
+          <span class="brand-name">DUGNAD<small>SCHOOL</small></span>
+        </a>
+        <p>Learning. Growing. Belonging.</p>
+        <a class="back-top" href="#home">Back to Top ↑</a>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Dugnad School. All rights reserved.</p>
+        <p>Matuga–Semuto Road, Wakiso District, Uganda</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
