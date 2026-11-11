@@ -1,37 +1,83 @@
-const menuButton = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+/* Dugnad School — navigation and enquiry form */
 
-menuButton.addEventListener('click', () => {
-  const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-  menuButton.setAttribute('aria-expanded', String(!isOpen));
-  menuButton.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
-  navLinks.classList.toggle('open', !isOpen);
-});
+/*
+  IMPORTANT:
+  Add the school's real, monitored email address below before publishing.
+  Example: const SCHOOL_EMAIL = "admissions@example.com";
+  The enquiry form opens the visitor's email application; it does not send
+  messages to a server. For direct website submissions, connect a secure
+  form service or your own backend.
+*/
+const SCHOOL_EMAIL = "";
 
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    menuButton.setAttribute('aria-expanded', 'false');
-    menuButton.setAttribute('aria-label', 'Open navigation');
-  });
-});
+document.addEventListener("DOMContentLoaded", () => {
+  const menuButton = document.querySelector(".menu-toggle");
+  const navigation = document.querySelector("#primary-navigation");
+  const navLinks = navigation ? navigation.querySelectorAll("a") : [];
+  const yearElement = document.querySelector("#year");
+  const enquiryForm = document.querySelector("#enquiry-form");
+  const formNote = document.querySelector("#form-note");
 
-document.getElementById('year').textContent = new Date().getFullYear();
-
-document.getElementById('enquiry-form').addEventListener('submit', event => {
-  event.preventDefault();
-  const form = event.currentTarget;
-  const schoolEmail = 'REPLACE_WITH_OFFICIAL_SCHOOL_EMAIL';
-  if (schoolEmail.startsWith('REPLACE_')) {
-    document.getElementById('form-note').textContent =
-      'Demo form: add the school’s official email address in script.js before publishing. No message has been sent.';
-    return;
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
   }
-  const data = new FormData(form);
-  const subject = encodeURIComponent('Website enquiry from ' + data.get('name'));
-  const body = encodeURIComponent(
-    'Name: ' + data.get('name') + '\\nEmail: ' + data.get('email') +
-    '\\nEnquiring as: ' + data.get('interest') + '\\n\\n' + data.get('message')
-  );
-  window.location.href = `mailto:${schoolEmail}?subject=${subject}&body=${body}`;
+
+  const closeMenu = () => {
+    if (!menuButton || !navigation) return;
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Open navigation");
+    navigation.classList.remove("is-open");
+  };
+
+  if (menuButton && navigation) {
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      menuButton.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+      navigation.classList.toggle("is-open", !isOpen);
+    });
+
+    navLinks.forEach((link) => link.addEventListener("click", closeMenu));
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeMenu();
+        menuButton.focus();
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      const clickedInsideMenu = navigation.contains(event.target) || menuButton.contains(event.target);
+      if (!clickedInsideMenu) closeMenu();
+    });
+  }
+
+  if (enquiryForm) {
+    enquiryForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (!enquiryForm.reportValidity()) return;
+
+      const formData = new FormData(enquiryForm);
+      const name = String(formData.get("name") || "").trim();
+      const email = String(formData.get("email") || "").trim();
+      const interest = String(formData.get("interest") || "").trim();
+      const message = String(formData.get("message") || "").trim();
+
+      if (!SCHOOL_EMAIL.trim()) {
+        if (formNote) {
+          formNote.textContent = "The enquiry form is ready, but the school's official email address has not yet been configured. Please add it to SCHOOL_EMAIL in script.js before publishing.";
+        }
+        return;
+      }
+
+      const subject = encodeURIComponent(`Website enquiry from ${name}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nEnquiring as: ${interest}\n\nMessage:\n${message}`
+      );
+
+      if (formNote) formNote.textContent = "Opening your email application…";
+      window.location.href = `mailto:${encodeURIComponent(SCHOOL_EMAIL)}?subject=${subject}&body=${body}`;
+    });
+  }
 });
